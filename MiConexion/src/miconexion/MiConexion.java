@@ -22,8 +22,9 @@ public class MiConexion {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         String host;
+        String host;
         String dbName;
+    
         
         try{
         
@@ -38,7 +39,7 @@ public class MiConexion {
             
             //3.- ESTABLECER CONEXION
             //En caso de tener un usuario y contraseña ponerlo
-            Connection db = DriverManager.getConnection(host + dbName,"root","");
+            Connection db = DriverManager.getConnection(host + dbName,"root","123456");
             
             //Es la sentencia a ejecutar
             Statement  st = db.createStatement();
