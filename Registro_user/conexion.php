@@ -1,7 +1,7 @@
 <?php
 $host_db = "localhost";
 $user_db = "root";
-$pass_db = "";
+$pass_db = "123456";
 $db_name = "asistencia";
 $tbl_name = "usuarios";
 

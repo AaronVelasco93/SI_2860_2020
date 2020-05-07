@@ -8,7 +8,7 @@ if (!isset($usuario)){
 
     header("location: login.php");
 }else {
-    $conn = new mysqli('localhost', 'root', '', 'asistencia');
+    $conn = new mysqli('localhost', 'root', '123456', 'asistencia');
     mysqli_set_charset($conn,'utf8'); 
     
     $consulta= $conn->query("select * from usuarios");
