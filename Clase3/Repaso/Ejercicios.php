@@ -21,8 +21,20 @@
         Ingresa el dia de la semana: <input type="text" name="txtdiasemana" placeholder="Ingresa un dia de la seman" >
         <button>Que dia es</button>
         <br>
-   </form>     
+   </form>
+   
+   
+   <br><br>
+    <form action="RespuestaSuma.php">
+    <br>     
+    Ingrese numero 1: <input name="num1"><br>
+    Ingrese numero 2: <input name="num2"><br>
+    Ingrese numero 3: <input name="num3">
+    <br>
+    <button>Resultado de la suma</button>
 
+
+    </form>
 </body>
 
 </html>

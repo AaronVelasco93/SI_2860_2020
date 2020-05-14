@@ -23,7 +23,9 @@
             echo "<h2 style='color: yellowgreen; background-color: blue;' >No eres mayor de edad</h2>";
         } else {
             echo "<br>";
+
             echo " <h1 style='color: yellowgreen;' >no eres mayor de edad</h1>";
+        
         }
 
     ?>
