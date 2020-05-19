@@ -43,13 +43,13 @@ include "conexion.php";
     <form action="validar_login.php" method="POST">
     <div class="form-group">
     <label >Nombre del Usuario</label>
-    <input type="text"  placeholder="Nombre del Usuario" name="nombre_usuario" require class="form-control" id="exampleInputEmail1" >
+    <input type="text"  placeholder="Nombre del Usuario" name="nombre_usuario" requiredclass="form-control" id="exampleInputEmail1" >
     
   </div>
   
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" placeholder="Contraseña" name="password" require class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" placeholder="Contraseña" name="password" requiredclass="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   
    <button type="submit" class="btn btn-primary" style="background-color:black;color:white">Iniciar Sesion</button>

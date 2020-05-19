@@ -1,5 +1,5 @@
 <?php
-require 'conexion.php';
+required'conexion.php';
 session_start();
 $usuario= $_SESSION['usermane'];
 

@@ -1,6 +1,6 @@
 <?php
 // se usa el requiere para si psi se necesita el archivo conexion
-require ("conexion.php");
+required("conexion.php");
 
 $conexion = new mysqli('127.0.0.1','root','123456','fes_aragon');
 
