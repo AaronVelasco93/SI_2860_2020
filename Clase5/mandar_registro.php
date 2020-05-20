@@ -5,38 +5,39 @@ mysqli_set_charset($conexion,'utf8');
 
 //declaracion de varibales para formulario
 
-$buscarUsuario = "SELECT * FROM persona where no_cuenta = '$_POST[no_cuenta]'";
+$form_pass =  $_POST ['password'];
+
+$buscarUsuario = "SELECT * FROM usuarios where nombre_usuario = '$_POST[nombre_usuario]'";
 
 $result = $conexion -> query($buscarUsuario);
 $count = mysqli_num_rows($result);
 
 if($count ==1 ){
     echo'El nombre se usuario ya a sido ocupado';
-    
+    echo "<a href='index.php'>Hacer Registro</a>";
     
 }else{
-    mysqli_query($conexion, "INSERT INTO alumno (
-    nombre_usuario,
-    carrera,
-    no_cuenta,
-    direcion,
+    mysqli_query($conexion, "INSERT INTO usuarios (
+    nombre,
+    direccion,
     telefono,
-    email,
+    correo,
+    nombre_usuario,
     password)
         VALUES(
-    '$_POST[nombre_usuario]',
-    '$_POST[carrera]',
-    '$_POST[no_cuenta]',
+    '$_POST[nombre]',
     '$_POST[direccion]',
     '$_POST[telefono]',
-    '$_POST[email]',
-    '$_POST[password]'
+    '$_POST[correo]',
+    '$_POST[nombre_usuario]',
+    '$_POST[password]'        
+
         
         
     )");
 echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";
-echo "<h4>" . "Bienvenido: " . $_POST['nombre_usuario'] . "</h4>";
-echo "<h5>" . "<a href='./index.php'>Registro Usuario</a>" . "</h5>";
+echo "<h4>" . "Bienvenido: " . $_POST['nombre'] . "</h4>" . "\n\n";
+echo "<h5>" . "<a href='./login.php'>Iniciar Sesión</a>" . "</h5>";
 
 //termina el else
 }
@@ -44,3 +45,4 @@ echo "<h5>" . "<a href='./index.php'>Registro Usuario</a>" . "</h5>";
 
 
 ?>
+

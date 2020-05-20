@@ -1,69 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+ <title>Registrar Usuario</title>
+ <meta charset = "utf-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Registro de usuario</title>
-</head>
-<script>// script para que los campos de numero no reciban texto
-    function valida(e) {
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ </head>
+
+
+<script>
+
+    function valida(e){
         tecla = (document.all) ? e.keyCode : e.which;
         //Tecla de retroceso para borrar, siempre la permite
-        if (tecla == 8) {
+        if (tecla==8){
             return true;
         }
 
         //patron de entrada, en este caso solo acepta numero
-        patron = /[0-9]/;
+        patron =/[0-9]/;
         tecla_final = String.fromCharCode(tecla);
         return patron.test(tecla_final);
     }
 </script>
+
 <body>
-    <header>
-        <h1 style="text-align:center">Registro de Alumnos ICO2.0</h1>
-    </header>
-
-    <form action="mandar_registro.php" method="post" >
-
-    <label for="nombre_usuario">Nombre Completo:</label>
-    <input type="text" name="nombre_usuario" maxlength="155" required>
-    <br><br>
-
-    <label for="carrera">Carrera:</label>
-    <input type="text" name="carrera" maxlength="255" required>
-
-    <br><br>
-    <label for="no_cuenta">Numero de Cuenta:</label>
-    <input type="" name="no_cuenta" maxlength="15" onkeypress="return valida(event)" required>
-
-    <br><br>
-    <label for="direccion">Direccion:</label>
-    <input type="text" name="direccion" maxlength="255" required>
+ <header>
+ <h2 style="text-align:center">Registro Alumnos 2.0 </h2>
+  </header>
 
 
-    <br><br>
-    <label for="telefono">Numero de Celular:</label>
-    <input type="" name="telefono" maxlength="10" onkeypress="return valida(event)" required>
-
-    <br><br>
-    <label for="email">Correo Electronico:</label>
-    <input type="email" name="email" maxlength="155" required>
-
-    <br><br>   
-    <label for="contraseña">Ingresa tu contraseña:</label>
-    <input type="password" name="password" maxlength="30" required>
-    <br><br>
-
-    <input type="submit" name="submit" value="Registrar Alumno">
-
-    <input type="reset" name="clear" value="Borrar campos">
-    
-
-    </form>
 
 
-</body>
+<form style="text-align:center"  action="mandar_registro.php" method="post">
 
+ <hr />
+
+ <!--Nombre-->
+ 
+ <label for="nombre">Nombre Completo:</label><br>
+ <input type="text" name="nombre" maxlength="255"  required>
+ <br/><br/>
+
+ <!-- Direcion -->
+
+<label for="direcion">Direccion:</label><br>
+<input type="text" name="direccion" maxlength="255" required>
+<br/><br/>
+
+<!-- Telefono -->
+
+<label for="telefono">Telefono:</label><br>
+<input type="text" onkeypress="return valida(event) "name="telefono" maxlength="15" required>
+<br/><br/>
+
+<!-- Email -->
+
+<label for="correo">Email:</label><br>
+<input type="email" name="correo" maxlength="35" required>
+<br/><br/>
+
+<!--Nombre_usuario-->
+
+<label for="nombre">Nombre Usuario:</label><br>
+<input type="text" name="nombre_usuario" maxlength="255"  required>
+<br/><br/>
+
+<!--Password-->
+
+<label for="pass">Password:</label><br>
+<input type="password" name="password" maxlength="8" required>
+
+ <br/><br/>
+ <input type="submit" name="submit" class="btn btn-primary" value="Registrarme">
+ <input type="reset" name="clear" class="btn btn-primary" value="Borrar">
+ 
+   
+
+ </form>
+
+ 
+
+
+ </body>
 </html>
