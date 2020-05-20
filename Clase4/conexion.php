@@ -2,14 +2,12 @@
 $host_db="127.0.0.1";
 $user_db="root";
 $pass_db="123456";
-$db_name="fes_aragon";
+$db_name="test_php";
 
-$conexion = mysqli_connect($host_db,$user_db,$pass_db);
+$conexion = new mysqli($host_db,$user_db,$pass_db,$db_name);
 
-if($conexion){
+if($conexion->connect_error){
     echo"<h1>MySQL le esta dando permisos para ejecutar consultas</h1>";
-}else{
-    echo"<h1>MySQL no le esta dando permisos para ejecutar consultas posible problema de pass y user</h1>";
 }
 
 ?>

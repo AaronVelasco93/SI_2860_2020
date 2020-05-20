@@ -1,11 +1,11 @@
 <?php
 // se usa el requiere para si psi se necesita el archivo conexion
-required("conexion.php");
+require "conexion.php";
+mysqli_set_charset($conexion,'utf8');
 
-$conexion = new mysqli('127.0.0.1','root','123456','fes_aragon');
 
 //genear el query
-$consulta_sql="SELECT * FROM ALUMNO";
+$consulta_sql="SELECT * FROM persona";
 
 //mandar el query por medio de la conexion y almacenaremos el resultado en una variable
 $resultado = $conexion->query($consulta_sql);
@@ -22,6 +22,7 @@ echo "<table border='2' >
         <th>Correo Electronico</th>
         <th>Contraseña</th>
         <th>Fecha de Registro</th>
+        <th>Permisos</th>
     </tr>";
 
 if ( $count>0 ){
@@ -31,15 +32,16 @@ if ( $count>0 ){
      echo"<td>". $row['nombre_usuario'] ."</td>";
      echo"<td>". $row['carrera'] ."</td>";
      echo"<td>". $row['no_cuenta'] ."</td>";
-     echo"<td>". $row['direccion'] ."</td>";
+     echo"<td>". $row['direcion'] ."</td>";
      echo"<td>". $row['telefono'] ."</td>";
      echo"<td>". $row['email'] ."</td>";
      echo"<td>". $row['password'] ."</td>";
-     echo"<td>". $row['fecha_registro'] ."</td>";
-     echo "</tr></table>";
+     echo"<td>". $row['FechaRegistro'] ."</td>";
+     echo"<td>". $row['Permisos'] ."</td>";
+     echo "</tr>";
      
     }
-
+    echo "</table>";
 
 }else{
     
