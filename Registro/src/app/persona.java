@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
 
 public class persona extends javax.swing.JFrame {
     
-    public static final String URL = "jdbc:mysql://localhost:3306/Persona"; //Direccion, puerto y nombre de la Base de Datos
-    public static final String USERNAME = "root"; //Usuario de Acceso a MySQL, para la configuracion por defecto se mantienen en blanco
-    public static final String PASSWORD = ""; //Password del usuario, para la configuracion por defecto se mantienen en blanco
+    public static final String URL = "jdbc:mysql://192.168.0.10:3306/Persona"; //Direccion, puerto y nombre de la Base de Datos
+    public static final String USERNAME = "Aaron"; //Usuario de Acceso a MySQL, para la configuracion por defecto se mantienen en blanco
+    public static final String PASSWORD = "123456"; //Password del usuario, para la configuracion por defecto se mantienen en blanco
     
     //Varables de consulta
     PreparedStatement ps;
